@@ -1,6 +1,6 @@
 # photon-web
 
-Fork of [Photon](https://github.com/nshen/photon) , republished with `wasm-pack build --target web`, make it work with [vite-plugin-wasm-pack](https://github.com/nshen/vite-plugin-wasm-pack).
+Fork of [Photon](https://github.com/silvia-odwyer/photon) , republished with `wasm-pack build --target web`, make it work with [vite-plugin-wasm-pack](https://github.com/nshen/vite-plugin-wasm-pack).
 
 [![npm](https://img.shields.io/npm/v/photon-web.svg)](https://www.npmjs.com/package/photon-web)
 
