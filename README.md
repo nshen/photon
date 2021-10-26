@@ -1,4 +1,20 @@
-# photon
+# photon-web
+
+Fork of [Photon](https://github.com/nshen/photon) , republished with `wasm-pack build --target web`, make it work with [vite-plugin-wasm-pack](https://github.com/nshen/vite-plugin-wasm-pack).
+
+[![npm](https://img.shields.io/npm/v/photon-web.svg)](https://www.npmjs.com/package/photon-web)
+
+## Install
+
+`npm i photon-web`
+
+### Demo:
+
+http://github.nshen.net/photon-vite/
+
+### Code:
+
+https://github.com/nshen/photon-vite
 
 <p align="center">
   <a href="" rel="noopener">
@@ -7,20 +23,6 @@
 
 <h3 align="center">Photon</h3>
 
-<div align="center">
-    
-  [![Status](https://img.shields.io/badge/status-active-success.svg?style=for-the-badge&logo=statuspal)]()
-  [![GitHub Issues](https://img.shields.io/github/issues/silvia-odwyer/photon.svg?style=for-the-badge&logo=github)](https://github.com/silvia-odwyer/photon/issues)
-  [![Gitter Chat](https://img.shields.io/gitter/room/silvia-odwyer/photon?color=cyan&logo=Gitter&style=for-the-badge)](https://gitter.im/photonlibrary/community "Gitter chat")
-  [![NPM Monthly Downloads](https://img.shields.io/npm/dm/@silvia-odwyer/photon?logo=npm&style=for-the-badge&color=pink)]()
-  [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/silvia-odwyer/photon/Continuous%20Integration?logo=github&style=for-the-badge)]()
-
-  [![Crates.io](https://img.shields.io/crates/v/photon_rs?logo=rust&style=for-the-badge)](https://crates.io/crates/photon_rs)
-  [![License](https://img.shields.io/github/license/silvia-odwyer/photon?style=for-the-badge)]()
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/silvia-odwyer/photon.svg?style=for-the-badge&logo=github-actions)](https://github.com/silvia-odwyer/photon/pulls)
-
-</div>
-
 ---
 
 <p align="center"> High-performance, cross-platform Rust/WebAssembly image processing library
@@ -28,6 +30,7 @@
 </p>
 
 ## 📝 Table of Contents
+
 - [Get Started with WebAssembly](https://github.com/silvia-odwyer/photon#get-started-with-webassembly)
 - [Get Started Natively](https://github.com/silvia-odwyer/photon#get-started-natively)
 - [Documentation](https://docs.rs/photon-rs/)
@@ -39,19 +42,22 @@ Photon is a high-performance Rust image processing library, which compiles to We
 safe, blazing-fast image processing both natively and on the web.
 
 You can run Photon:
+
 - natively
 - in the browser with WebAssembly
 - on Node with WebAssembly
 
 ### Features
+
 - **Fast:** On the web, Photon's high-performance allows it to run at near-native speed. Benchmarks can be found [here](https://github.com/silvia-odwyer/photon/wiki/Benchmarks).
 - **Call with JS:** Want to use Photon on the web or with Node? Using a simple npm package, you're good to go. Get all the benefits of WebAssembly
-with zero-cost abstraction.
+  with zero-cost abstraction.
 - **Use Natively:** For command-line apps, native photo editing apps, and so forth, Photon's core codebase is in Rust, allowing for cross-platform
-development.
+  development.
 - **Pure Rust** - Unlike other libraries, 100% of the library's codebase is written in Rust, so security and safety is guaranteed.
 
 ### Live Demo
+
 View the [official demo of WASM in action](https://silvia-odwyer.github.io/photon/demo.html).
 
 ### Photon In Action
@@ -59,28 +65,35 @@ View the [official demo of WASM in action](https://silvia-odwyer.github.io/photo
 ![Imgur](https://i.imgur.com/PShSZ6k.png)
 
 ### Version 0.3.1 Release
+
 Version 0.3.1 has been released on Crates.io and NPM, including new features such as a frosted glass effect and new filters.
 
 ### Supported Image Formats
+
 The following image formats are supported:
 
 - PNG
 - JPEG
 - BMP
-- ICO 
+- ICO
 - TIFF
 
 ### Get Started
+
 #### Getting Started Guide
+
 Check out Photon's [getting started guide, complete with tutorials, installation instructions, and more](https://silvia-odwyer.github.io/photon/guide)
 
 ### 📚 Documentation
+
 View the [official documentation](https://docs.rs/photon-rs/).
 
 ### Functions
+
 96 customisable functions are available, for varying image effects.
 
 Functions include:
+
 - **Image correction**: Hue rotation, sharpening, brightness adjustment, adjusting saturation, lightening/darkening all within various colour spaces.
 - **Resizing**: Resize images both natively and on the web.
 - **Convolutions**: Sobel filters, blurs, Laplace effects, edge detection, etc.,
@@ -94,15 +107,18 @@ Functions include:
 ## Get Started Natively
 
 ### Install
+
 Add the following line to the dependencies section of your Rust project's Cargo.toml:
 
 ###### Cargo.toml
+
 ```toml
 [dependencies]
 photon-rs = "0.3.1"
 ```
 
 #### Using Photon Natively
+
 The following code opens an image from the filesystem, applies an effect, and outputs it as a PNG.
 
 Here is a code sample to get you started:
@@ -126,20 +142,23 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 ```
 
 ##### See More Examples
+
 [For more examples, check out the guide on how to get started with Photon natively.](https://silvia-odwyer.github.io/photon/guide/using-photon-natively/)
 
 ### Building WebAssembly package
 
 In order to build the WebAssembly package you will need `wasm-pack`. Check https://rustwasm.github.io/wasm-pack/installer/ on how to install it. Then you can run the command:
 
-
 ```bash
 wasm-pack build ./crate
 ```
 
 ## Get Started With WebAssembly
+
 ### Using a Bundler?
+
 #### Installing Photon
+
 If you're using Webpack or a bundler to build your project, install Photon via npm:
 
 ```bash
@@ -149,9 +168,11 @@ npm install @silvia-odwyer/photon
 You can run Photon directly in any web browser that supports WebAssembly, which includes Chrome, Firefox, Safari, and Edge.
 
 ##### Get Started with Photon on The Web
+
 To get started, [check out the guide](https://silvia-odwyer.github.io/photon/guide/using-photon-web/).
 
 #### Using NodeJS?
+
 If you're intending to use Photon with NodeJS, you can install the NodeJS version of the library:
 
 ```bash
@@ -162,23 +183,27 @@ npm install @silvia-odwyer/photon-node
 See the [NodeJS tutorial, which shows how to use Photon with NodeJS](). -->
 
 ## Modules
+
 Photon contains a series of modules, which include:
 
 - `effects`: Various image effects, including adding offsets, thresholding, duotoning, solarization, etc.,
 - `channels`: Functions related to increasing/decreasing the red, green, and blue channels of the image data.
 - `filters`: Preset filters, which alter the rgb channels of the image. Contains over 20.
 - `conv`: Laplace, Sobel, emboss; image proc functions which require image convolution.
--  `noise`: Noise generation of varying tints and hues.
+- `noise`: Noise generation of varying tints and hues.
 - `multiple`: A module for dealing with multiple images, such as watermarking images, etc.,
 - `correction`: Hue rotation, adjusting saturation, lightening/darkening: all techniques available in multiple colour spaces, which lead to varying effects.
 
 ### Quick Start Example
+
 Clone this repo:
+
 ```sh
 git clone https://github.com/silvia-odwyer/photon
 ```
 
 Run the binary, which will perform an image processing function on an image:
+
 ```sh
 cargo run --release
 ```
@@ -186,6 +211,7 @@ cargo run --release
 Compare the original image with the outputted image, and you'll see the desired effect has been applied.
 
 ## Got Questions?
+
 If you have further questions about this library, you can ask them on [Gitter](https://gitter.im/photonlibrary/community) or [Spectrum](https://spectrum.chat/photonlibrary), and I'll get back to you!
 
 If there are any issues involving running/using the library, make sure to open an issue, it would be greatly appreciated,
@@ -195,6 +221,7 @@ and will help improve the library.
 - [Gitter](https://gitter.im/photonlibrary/community)
 
 ## Additional Notes
+
 Functions have been designed with flexibility in mind, so that full customization of effects and filters can be utilised; for every function, hundreds of differing image effects/tints/hues can be created, just by changing parameters slightly, so with every function comes the ability to fully experiment.
 
 For developers who would like to work with high-level constructs can do so, such as applying effects to imagery (eg: Laplace or Sobel)
@@ -207,6 +234,7 @@ or filters; this library provides a complete suite of functions to do so, as wel
 Photon is always ready for new filters and functions, so if you'd like to contribute, we're always ready to accept new Pull Requests or investigate new issues.
 
 ## To Do
+
 - Selective colorization
 - Fade
 - Blend images using browser-specific functions for WASM version of library.
@@ -216,9 +244,10 @@ Photon is always ready for new filters and functions, so if you'd like to contri
 
 ## Contributors
 
-* **Silvia O'Dwyer** - [@silvia-odwyer](https://github.com/silvia-odwyer)
-* **Ivan Zvonimir Horvat** - [@Horki](https://github.com/Horki)
-* **Future You(?)** - (See Contributing above ;)
+- **Silvia O'Dwyer** - [@silvia-odwyer](https://github.com/silvia-odwyer)
+- **Ivan Zvonimir Horvat** - [@Horki](https://github.com/Horki)
+- **Future You(?)** - (See Contributing above ;)
 
 ## License
+
 This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for details.
